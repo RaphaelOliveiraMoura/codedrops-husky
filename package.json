@@ -13,13 +13,14 @@
     }
   },
   "lint-staged": {
-    "src/**/*.js": [
+    "*.js": [
       "eslint --fix",
       "cross-env CI=true yarn test --findRelatedTests"
     ]
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "micromatch": "^4.0.2"
   },
   "devDependencies": {
     "@types/jest": "^24.9.0",
