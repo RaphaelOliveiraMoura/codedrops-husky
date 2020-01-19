@@ -4,15 +4,28 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "sucrase-node src/index.js"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo 'teste'"
+      "pre-commit": "lint-staged"
     }
   },
-  "dependencies": {},
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
   "devDependencies": {
-    "husky": "^4.0.10"
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.0",
+    "husky": "^4.0.10",
+    "lint-staged": "^10.0.0",
+    "sucrase": "^3.12.1"
   }
 }
