@@ -1,0 +1,18 @@
+{
+  "name": "codedrops-husky",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "echo 'pre-commit with husky hooks'"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^4.0.10"
+  }
+}
