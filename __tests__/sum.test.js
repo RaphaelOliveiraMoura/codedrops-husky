@@ -3,5 +3,5 @@ it('should be sum two numbers', () => {
 });
 
 it('should be sum three numbers', () => {
-  expect(1 + 1 + 1).toBe(3);
+  expect(1 + 1 + 2).toBe(3);
 });
