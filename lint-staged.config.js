@@ -1,6 +1,6 @@
 const micromatch = require('micromatch');
 
-const filesToIgnore = ['jest.config.js', 'eslintrc.js'];
+const filesToIgnore = ['eslintrc.js'];
 
 module.exports = {
   '*.js': (files) => {
