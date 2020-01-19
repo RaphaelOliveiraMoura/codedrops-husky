@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "sucrase-node src/index.js"
+    "start": "sucrase-node src/index.js",
+    "test": "jest"
   },
   "husky": {
     "hooks": {
@@ -13,17 +14,21 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint --fix"
+      "eslint --fix",
+      "cross-env CI=true yarn test --findRelatedTests"
     ]
   },
   "dependencies": {
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@types/jest": "^24.9.0",
+    "cross-env": "^6.0.3",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.20.0",
     "husky": "^4.0.10",
+    "jest": "^24.9.0",
     "lint-staged": "^10.0.0",
     "sucrase": "^3.12.1"
   }
